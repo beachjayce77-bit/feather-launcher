@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feather Launcher</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="window">
+      <div class="titlebar">
+        <div class="branding">
+          <div class="brand-mark">F</div>
+          <span>Feather</span>
+        </div>
+
+        <div class="title-controls">
+          <button class="mini-btn" id="minimize">—</button>
+          <button class="mini-btn" id="close">✕</button>
+        </div>
+      </div>
+
+      <div class="launcher-shell">
+        <aside class="sidebar">
+          <div class="nav-section">
+            <div class="nav-item active">Home</div>
+            <div class="nav-item">Installations</div>
+            <div class="nav-item">Settings</div>
+            <div class="nav-item">Mods</div>
+          </div>
+
+          <div class="profile-card">
+            <div class="avatar"></div>
+            <div class="profile-info">
+              <h3>PlayerOne</h3>
+              <span>Premium</span>
+            </div>
+          </div>
+
+          <div class="status-box">
+            <div class="status-row">
+              <span>Java</span>
+              <strong>Detected</strong>
+            </div>
+            <div class="status-row">
+              <span>Version</span>
+              <strong>1.20.1</strong>
+            </div>
+            <div class="status-row">
+              <span>RAM</span>
+              <strong>2 GB</strong>
+            </div>
+          </div>
+        </aside>
+
+        <main class="content">
+          <div class="hero">
+            <div class="hero-text">
+              <p class="tiny-label">Minecraft Launcher</p>
+              <h1>Ready to play</h1>
+            </div>
+
+            <button id="launchBtn" class="launch-btn">Launch</button>
+          </div>
+
+          <section class="panel">
+            <div class="panel-header">
+              <h2>Play</h2>
+              <span class="pill">Latest profile</span>
+            </div>
+
+            <div class="profile-row">
+              <div class="profile-meta">
+                <div class="profile-icon"></div>
+                <div>
+                  <h3>Default</h3>
+                  <p>1.20.1 • OptiFine-ready</p>
+                </div>
+              </div>
+
+              <div class="version-box">
+                <label>Version</label>
+                <select id="versionSelect">
+                  <option>1.20.1</option>
+                  <option>1.19.4</option>
+                  <option>1.18.2</option>
+                  <option>1.8.9</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <section class="grid">
+            <div class="card">
+              <h3>Java Settings</h3>
+              <label>Java path</label>
+              <input id="javaPath" type="text" value="java" />
+
+              <label>Min memory</label>
+              <input id="minMemory" type="text" value="1G" />
+
+              <label>Max memory</label>
+              <input id="maxMemory" type="text" value="2G" />
+            </div>
+
+            <div class="card">
+              <h3>Game Directory</h3>
+              <label>Directory</label>
+              <input id="gameDir" type="text" value="C:/Minecraft" />
+
+              <label>Jar Location</label>
+              <input id="jarPath" type="text" value="" placeholder="Optional custom jar path" />
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
